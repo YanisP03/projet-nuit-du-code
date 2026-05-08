@@ -1,0 +1,76 @@
+.loading-container {
+    position: fixed;
+    inset: 0;
+    background: linear-gradient(180deg, #0093E9 0%, #80D0C7 100%);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    overflow: hidden;
+ }
+ 
+ .circle {
+    position: relative;
+    width: 200px;
+    height: 200px;
+ }
+ 
+ .progress-ring svg {
+    width: 200px;
+    height: 200px;
+    transform: rotate(-90deg);
+ }
+ 
+ .progress-ring-circle-bg {
+    fill: none;
+    stroke: rgba(255, 255, 255, 0.2);
+    stroke-width: 8px;
+ }
+ 
+ .progress-ring-circle {
+    fill: none;
+    stroke: white;
+    stroke-width: 8px;
+    stroke-dasharray: 565.48;
+    stroke-dashoffset: 565.48;
+    transition: stroke-dashoffset 0.3s ease;
+ }
+ 
+ .percent {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2rem;
+    font-weight: bold;
+    color: white;
+ }
+ 
+ .bubble {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    pointer-events: none;
+ }
+ 
+ @keyframes bubbleRise {
+    0% {
+        transform: translateY(0) translateX(0);
+        opacity: 0.8;
+    }
+    100% {
+        transform: translateY(-100vh) translateX(var(--moveX));
+        opacity: 0;
+    }
+ }
+ 
+ body.loading * {
+    visibility: hidden !important;
+ }
+ 
+ body.loading .loading-container,
+ body.loading .loading-container *,
+ body.loading .bubble {
+    visibility: visible !important;
+ }

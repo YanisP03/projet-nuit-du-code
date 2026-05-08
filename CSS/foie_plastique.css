@@ -1,0 +1,251 @@
+/* Variables globales */
+:root {
+    --deep-blue: #1B4965;
+    --medium-blue: #62B6CB;
+    --light-blue: #BEE9E8;
+    --toxic-accent: #CAE4DB;
+    --white: #FFFFFF;
+    --shadow: rgba(0, 0, 0, 0.15);
+    --transition: all 0.3s ease;
+}
+
+/* Reset et styles de base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: var(--deep-blue);
+    color: var(--white);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* Navigation */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: linear-gradient(120deg, var(--deep-blue), var(--medium-blue));
+    z-index: 1000;
+    box-shadow: 0 4px 15px var(--shadow);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: var(--white);
+    text-decoration: none;
+    font-size: 2.2rem;
+    font-weight: 700;
+    transition: var(--transition);
+}
+
+.logo:hover {
+    transform: scale(1.1);
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links a {
+    color: var(--white);
+    text-decoration: none;
+    font-size: 1.1rem;
+    padding: 0.6rem 1.2rem;
+    border-radius: 25px;
+    transition: var(--transition);
+    text-transform: uppercase;
+}
+
+.nav-links a:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+}
+
+/* Hero Section */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 6rem 2rem;
+    position: relative;
+    background: linear-gradient(rgba(27, 73, 101, 0.8), rgba(27, 73, 101, 0.8));
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: repeating-linear-gradient(
+        45deg,
+        transparent,
+        transparent 20px,
+        rgba(202, 228, 219, 0.1) 20px,
+        rgba(202, 228, 219, 0.1) 40px
+    );
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+}
+
+.hero h1 {
+    font-size: 4rem;
+    font-weight: 800;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Content Sections */
+.section {
+    padding: 6rem 0;
+    position: relative;
+}
+
+.content {
+    background-color: var(--medium-blue);
+}
+
+.text-block {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 2rem;
+    border-radius: 12px;
+    backdrop-filter: blur(5px);
+    max-width: 900px;
+    margin: 0 auto 2rem;
+}
+
+/* Image Gallery */
+.image-gallery {
+    background-color: var(--deep-blue);
+}
+
+.image-gallery .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.image-card {
+    background: var(--medium-blue);
+    padding: 1rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px var(--shadow);
+    transition: var(--transition);
+    overflow: hidden;
+}
+
+.image-card:hover {
+    transform: translateY(-10px);
+}
+
+.image-card img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.image-card p {
+    text-align: center;
+    color: var(--white);
+}
+
+/* Climate Impact Section */
+.climate-impact {
+    background: var(--medium-blue);
+}
+
+.climate-impact .text-block {
+    background: rgba(27, 73, 101, 0.2);
+}
+
+.climate-impact ul {
+    list-style: none;
+    padding-left: 2rem;
+}
+
+.climate-impact li {
+    position: relative;
+    padding-left: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.climate-impact li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: var(--toxic-accent);
+}
+
+/* CTA Section */
+.cta {
+    background: linear-gradient(120deg, var(--deep-blue), var(--medium-blue));
+    text-align: center;
+    padding: 4rem 2rem;
+}
+
+.cta h3 {
+    font-size: 2.2rem;
+    font-weight: 700;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+    
+    .nav-links {
+        display: none;
+    }
+    
+    .container {
+        padding: 1rem;
+    }
+    
+    .text-block {
+        padding: 1.5rem;
+    }
+}
+
+/* Scrollbar personnalisée */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--deep-blue);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--medium-blue);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--toxic-accent);
+}

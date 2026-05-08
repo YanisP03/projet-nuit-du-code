@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../CSS/navbar.css">
+    <link rel="stylesheet" href="../CSS/loading.css">
+    <link rel="stylesheet" href="../CSS/credit.css">
+</head>
+<body>
+    <header>
+        <section class="navbar">
+            <nav>
+                <div class="container">
+                    <a href="#" class="logo" id="bubbleSoundButton" onclick="showLoadingWithProgress('./accueil.html'); return false;">
+                        🌊 OceanToons
+                    </a>
+                    <button class="menu-btn" id="menu-toggle">☰</button>
+                    <div class="nav-links">
+                        <a href="#"> ©️ Crédit </a>
+                        <a href="#" id="bubbleSoundButton" onclick="showLoadingWithProgress('./contact.html'); return false;">💬 Contact</a>
+                        <a href="#" id="bubbleSoundButton" onclick="showLoadingWithProgress('./video.html'); return false;">🎥 Podcast</a>
+                    </div>
+                </div>
+            </nav>
+        </section>
+    </header>
+
+    <div class="loading-container">
+        <audio id="bubbleSound" preload="auto">
+            <source src="../IMAGES/Bruitage gratuit bulle.mp3" type="audio/mpeg">
+        </audio>
+        <div class="bubbles-background"></div>
+        <div class="circle">
+            <div class="progress-ring">
+                <svg>
+                    <circle class="progress-ring-circle-bg" cx="100" cy="100" r="90"/>
+                    <circle class="progress-ring-circle" cx="100" cy="100" r="90"/>
+                </svg>
+            </div>
+            <div class="percent">0%</div>
+        </div>
+    </div>
+
+    <div class="credits-container">
+        <div class="credit-card">
+          <div class="credit-info">
+            <h2>Nathan BETTON</h2>
+            <div class="contact-info">📧 <a href="mailto:nathan.betton@veniseverteniort.org">nathan.betton@veniseverteniort.org</a></div>
+            <div class="contact-info">📱 <a href="#">+33 7 68 50 38 79</a></div>
+            <div class="contribution">🌊 Front page crédit + paralax fond d'écran accueil </div>
+          </div>
+          <img src="../IMAGES/Nathan.jpg" alt="Nathan BETTON" class="credit-image"/>
+          <div class="waves"></div>
+        </div>
+    
+        <div class="credit-card">
+          <div class="credit-info">
+            <h2>Adam BOUALI</h2>
+            <div class="contact-info">📧 <a href="mailto:adam.bouali@veniseverteniort.org">adam.bouali@veniseverteniort.org</a></div>
+            <div class="contact-info">📱 <a href="#">+33 7 66 41 81 77</a></div>
+            <div class="contribution">🌊 Page accueil / Contact (front-end : style css, js, html) </div>
+          </div>
+          <img src="../IMAGES/Adam.jpg" alt="Adam BOUALI" class="credit-image"/>
+          <div class="waves"></div>
+        </div>
+    
+        <div class="credit-card">
+          <div class="credit-info">
+            <h2>Yanis PERRIN</h2>
+            <div class="contact-info">📧 <a href="mailto:yanis.perrin@veniseverteniort.org">yanis.perrin@veniseverteniort.org</a></div>
+            <div class="contact-info">📱 <a href="#">+33 6 03 53 44 80</a></div>
+            <div class="contribution">🌊 Contenu du site + pages reliés aux émojies</div>
+          </div>
+          <img src="../IMAGES/Yanis.jpg" alt="Yanis PERRIN" class="credit-image"/>
+          <div class="waves"></div>
+        </div>
+    
+        <div class="credit-card">
+          <div class="credit-info">
+            <h2>Andy VEZIEN</h2>
+            <div class="contact-info">📧 <a href="mailto:andy.vezien@veniseverteniort.org">andy.vezien@veniseverteniort.org</a></div>
+            <div class="contact-info">📱 <a href="#">+33 7 89 12 34 56</a></div>
+            <div class="contribution">🌊 Cahier des charges et PIA</div>
+          </div>
+          <img src="../IMAGES/Andy.jpg" alt="Andy VEZIEN" class="credit-image"/>
+          <div class="waves"></div>
+        </div>
+      </div>
+
+</body>
+<script src="../JS/transition.js"></script>
+</html>

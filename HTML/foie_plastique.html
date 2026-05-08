@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foie et Plastique dans les Océans</title>
+    <link rel="stylesheet" href="../CSS/foie_plastique.css">
+    <link rel="stylesheet" href="../CSS/navbar.css">
+    <link rel="stylesheet" href="../CSS/loading.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <header>
+        <section class="navbar">
+            <nav>
+                <div class="container">
+                    <a href="#" class="logo" id="bubbleSoundButton" onclick="showLoadingWithProgress('./accueil.html'); return false;">
+                        🌊 OceanToons
+                    </a>
+                    <button class="menu-btn" id="menu-toggle">☰</button>
+                    <div class="nav-links">
+                        <a href="#" id="bubbleSoundButton" onclick="showLoadingWithProgress('./credit.html'); return false;"> ©️ Crédit </a>
+                        <a href="#" id="bubbleSoundButton" onclick="showLoadingWithProgress('./contact.html'); return false;">💬 Contact</a>
+                        <a href="#" id="bubbleSoundButton" onclick="showLoadingWithProgress('./video.html'); return false;">🎥 Podcast</a>
+                    </div>
+                </div>
+            </nav>
+        </section>
+    </header>
+
+    <!-- Section Hero -->
+    <section class="hero" id="hero">
+        <div class="hero-content">
+            <h1>Le Foie de la Planète</h1>
+            <p>Découvrez le lien vital entre votre foie et la pollution plastique dans les océans.</p>
+        </div>
+    </section>
+
+    <!-- Section Contenu -->
+    <section class="content" id="content">
+        <div class="container">
+            <h2>Le Foie et le Plastique : Une Interconnexion Cruciale</h2>
+            <div class="text-block">
+                <p>
+                    Le foie est l'organe de détoxification du corps humain. Il filtre les toxines, régule les nutriments et élimine les déchets. Lorsque le foie est surchargé de toxines, il ne peut plus remplir ses fonctions correctement.
+                </p>
+                <p>
+                    De manière similaire, les océans agissent comme le "foie" de la planète, absorbant de grandes quantités de pollution, dont le plastique. Mais lorsque les océans sont trop pollués, cette capacité de filtration est dépassée, avec des conséquences dramatiques pour les écosystèmes marins et terrestres. L'accumulation de déchets plastiques dans les océans perturbe la chaîne alimentaire et met en danger de nombreuses espèces marines.
+                </p>
+            </div>
+            <h3>Pourquoi Protéger les Océans ?</h3>
+            <div class="text-block">
+                <p>
+                    La pollution plastique dans les océans perturbe les systèmes naturels, tout comme un foie malade empêche le corps de fonctionner correctement. Elle tue la biodiversité marine, pollue les plages et affecte la qualité de l'eau. Il est impératif de réduire notre consommation de plastique et d'agir pour préserver la santé des océans et des êtres vivants qui en dépendent, y compris les humains.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Galerie -->
+    <section class="image-gallery" id="gallery">
+        <div class="container">
+            <div class="image-card">
+                <img src="./Images/foie.png" alt="Foie humain">
+                <p>Foie humain : Organe de détoxification vital pour le corps.</p>
+            </div>
+            <div class="image-card">
+                <img src="./Images/plastiqueOcean.png" alt="Plastique dans l'océan">
+                <p>Plastique dans les océans : Une pollution croissante qui affecte l'écosystème marin.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Effets du Changement Climatique -->
+    <section class="climate-impact" id="climate-impact">
+        <div class="container">
+            <h2>Les Effets de la Pollution Plastique</h2>
+            <div class="text-block">
+                <p>
+                    La pollution plastique perturbe non seulement la faune marine, mais elle pollue également les écosystèmes marins, rendant difficile le nettoyage naturel des océans. Cela a des répercussions directes sur la biodiversité, la santé humaine et l'équilibre climatique. En dégradant la qualité de l'eau, elle impacte les populations qui dépendent des océans pour la nourriture, le commerce et les loisirs.
+                </p>
+                <h3>Actions à Entreprendre :</h3>
+                <ul>
+                    <li>Réduire l'utilisation de plastique à usage unique, en particulier les bouteilles, sacs et pailles.</li>
+                    <li>Participer à des actions de nettoyage des plages, des rivières et des océans.</li>
+                    <li>Soutenir des législations pour interdire les plastiques à usage unique et encourager le recyclage.</li>
+                    <li>Promouvoir des alternatives durables au plastique, comme le verre, l'acier inoxydable et les matériaux biodégradables.</li>
+                    <li>Investir dans des technologies innovantes pour nettoyer les océans, comme les barrières flottantes et les collecteurs de plastique.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Appel à l'Action -->
+    <section class="cta">
+        <h3>Protégeons nos foies, protégeons nos océans</h3>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 OceanToons - Tous droits réservés</p>
+    </footer>
+
+    <div class="loading-container">
+        <audio id="bubbleSound" preload="auto">
+            <source src="../IMAGES/Bruitage gratuit bulle.mp3" type="audio/mpeg">
+        </audio>
+        <div class="bubbles-background"></div>
+        <div class="circle">
+            <div class="progress-ring">
+                <svg>
+                    <circle class="progress-ring-circle-bg" cx="100" cy="100" r="90"/>
+                    <circle class="progress-ring-circle" cx="100" cy="100" r="90"/>
+                </svg>
+            </div>
+            <div class="percent">0%</div>
+        </div>
+    </div>
+    <!-- Scripts -->
+    <script src="../JS/transition.js"></script>
+</body>
+</html>

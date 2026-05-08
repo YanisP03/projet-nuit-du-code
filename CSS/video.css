@@ -1,0 +1,124 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    background: linear-gradient(to bottom, #00BFFF, #ADD8E6); /* Couleur de fond évoquant l'eau */
+    color: #003366; /* Couleur bleu foncé pour le texte */
+}
+
+.navbar {
+    background: #006994; /* Bleu océan */
+    padding: 15px;
+}
+
+.navbar .logo {
+    font-size: 1.5em;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.navbar .nav-links a {
+    color: #fff;
+    margin-left: 15px;
+    text-decoration: none;
+    font-size: 1.1em;
+}
+
+.navbar .nav-links a:hover {
+    color: #FFD700; /* Couleur dorée évoquant le sable */
+}
+
+.video-gallery {
+    text-align: center;
+    padding: 50px;
+    background: #f0f8ff; /* Légère couleur bleu clair pour l'arrière-plan de la section */
+}
+
+.video-gallery h1 {
+    font-size: 2.5em;
+    color: #006994; /* Bleu océan pour le titre */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.video-grid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.video-card {
+    width: 220px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+    background: #ffffff; /* Fond blanc pour les cartes vidéo */
+}
+
+.video-card img {
+    width: 100%;
+    display: block;
+    border-bottom: 2px solid #006994; /* Bordure bleu océan */
+}
+
+.video-card p {
+    background: #006994; /* Bleu océan pour le texte */
+    color: #fff;
+    padding: 10px;
+    margin: 0;
+    text-align: center;
+    font-weight: bold;
+}
+
+.video-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    position: relative;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    border: 5px solid #006994; /* Bordure bleu océan autour du modal */
+}
+
+.modal-content video {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: transparent;
+    border: none;
+    font-size: 1.5em;
+    cursor: pointer;
+    color: #006994; /* Couleur bleu océan pour le bouton de fermeture */
+}
+
+.close-btn:hover {
+    color: #FFD700; /* Couleur dorée pour un effet au survol */
+}

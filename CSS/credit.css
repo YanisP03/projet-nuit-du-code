@@ -1,0 +1,99 @@
+:root {
+    --ocean-deep: #05445E;
+    --ocean-medium: #189AB4;
+    --ocean-light: #75E6DA;
+    --ocean-foam: #D4F1F4;
+  }
+  
+  body {
+    margin: 0;
+    padding: 0;
+    background: var(--ocean-deep);
+    font-family: 'Arial', sans-serif;
+    color: var(--ocean-foam);
+  }
+  
+  .credits-container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+  }
+  
+  .credit-card {
+    background: var(--ocean-medium);
+    border-radius: 15px;
+    margin: 2rem 0;
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+  }
+  
+  .credit-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .credit-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at 50% 50%, rgba(117, 230, 218, 0.1) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  
+  .credit-info {
+    flex: 1;
+    padding-right: 2rem;
+  }
+  
+  .credit-image {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid var(--ocean-light);
+  }
+  
+  .waves {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 320'%3E%3Cpath fill='%2375E6DA' fill-opacity='0.2' d='M0,96L48,112C96,128,192,160,288,186.7C384,213,480,235,576,224C672,213,768,171,864,149.3C960,128,1056,128,1152,133.3C1248,139,1344,149,1392,154.7L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z'%3E%3C/path%3E%3C/svg%3E");
+    background-size: cover;
+    opacity: 0.5;
+  }
+  
+  h2 {
+    color: var(--ocean-foam);
+    margin: 0 0 1rem 0;
+    font-size: 2rem;
+  }
+  
+  .contact-info {
+    margin: 0.5rem 0;
+    color: var(--ocean-light);
+  }
+  
+  .contact-info a {
+    color: var(--ocean-foam);
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .contact-info a:hover {
+    color: var(--ocean-light);
+  }
+  
+  .contribution {
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--ocean-light);
+    color: var(--ocean-foam);
+  }

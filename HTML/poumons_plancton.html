@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Poumons et Plancton</title>
+    <link rel="stylesheet" href="../CSS/poumons_plancton.css">
+    <link rel="stylesheet" href="../CSS/navbar.css">
+    <link rel="stylesheet" href="../CSS/loading.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <header>
+        <section class="navbar">
+            <nav>
+                <div class="container">
+                    <a href="#" class="logo" id="bubbleSoundButton" onclick="showLoadingWithProgress('./accueil.html'); return false;">
+                        🌊 OceanToons
+                    </a>
+                    <button class="menu-btn" id="menu-toggle">☰</button>
+                    <div class="nav-links">
+                        <a href="#" id="bubbleSoundButton" onclick="showLoadingWithProgress('./credit.html'); return false;"> ©️ Crédit </a>
+                        <a href="#" id="bubbleSoundButton" onclick="showLoadingWithProgress('./contact.html'); return false;">💬 Contact</a>
+                        <a href="#" id="bubbleSoundButton" onclick="showLoadingWithProgress('./video.html'); return false;">🎥 Podcast</a>
+                    </div>
+                </div>
+            </nav>
+        </section>
+    </header>
+
+    <!-- Section Hero -->
+    <section class="hero" id="hero">
+        <div class="hero-content">
+            <h1>Les Poumons de la Terre</h1>
+            <p>Découvrez l'interconnexion vitale entre vos poumons et le plancton océanique.</p>
+        </div>
+    </section>
+
+    <!-- Section Contenu -->
+    <section class="content" id="content">
+        <div class="container">
+            <h2>Poumons et Plancton : Une Relation Essentielle</h2>
+            <div class="text-block">
+                <p>
+                    Les poumons humains jouent un rôle vital dans la respiration, fournissant l'oxygène nécessaire à la vie. 
+                    De manière similaire, le phytoplancton agit comme les poumons de la planète, produisant plus de 50% de l'oxygène terrestre.
+                </p>
+                <p>
+                    Malheureusement, la pollution et le réchauffement climatique affectent cette ressource essentielle. 
+                    Tout comme des poumons endommagés nuisent à la respiration, un plancton en danger compromet 
+                    l'équilibre de notre écosystème mondial.
+                </p>
+            </div>
+            <h3>Pourquoi Protéger le Plancton ?</h3>
+            <div class="text-block">
+                <p>
+                    Le plancton est crucial pour la survie de la faune marine et l'équilibre de l'écosystème océanique. 
+                    Un déclin du plancton entraîne des perturbations dans la chaîne alimentaire, mettant en péril 
+                    les populations humaines et marines.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Galerie -->
+    <section class="image-gallery" id="gallery">
+        <div class="container">
+            <div class="image-card">
+                <img src="./Images/poumons.png" alt="Poumons humains">
+                <p>Poumons humains : Échange vital d'oxygène et de dioxyde de carbone.</p>
+            </div>
+            <div class="image-card">
+                <img src="./Images/plancton.png" alt="Phytoplancton marin">
+                <p>Phytoplancton : Producteur majeur d'oxygène sur Terre.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Effets du Changement Climatique -->
+    <section class="climate-impact" id="climate-impact">
+        <div class="container">
+            <h2>Les Effets du Changement Climatique</h2>
+            <div class="text-block">
+                <p>
+                    Le réchauffement climatique et la pollution affectent gravement les poumons humains et le plancton. 
+                    La hausse des températures et l'acidification des océans mettent en danger ces organismes vitaux.
+                </p>
+                <h3>Actions à Entreprendre :</h3>
+                <ul>
+                    <li>Réduire la consommation de plastique.</li>
+                    <li>Soutenir la lutte contre les émissions de gaz à effet de serre.</li>
+                    <li>Favoriser des pratiques de pêche durables.</li>
+                    <li>Participer aux campagnes de nettoyage des océans.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Appel à l'Action -->
+    <section class="cta">
+        <h3>Protégeons nos poumons, protégeons nos océans</h3>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 OceanToons - Tous droits réservés</p>
+    </footer>
+
+    <div class="loading-container">
+        <audio id="bubbleSound" preload="auto">
+            <source src="../IMAGES/Bruitage gratuit bulle.mp3" type="audio/mpeg">
+        </audio>
+        <div class="bubbles-background"></div>
+        <div class="circle">
+            <div class="progress-ring">
+                <svg>
+                    <circle class="progress-ring-circle-bg" cx="100" cy="100" r="90"/>
+                    <circle class="progress-ring-circle" cx="100" cy="100" r="90"/>
+                </svg>
+            </div>
+            <div class="percent">0%</div>
+        </div>
+    </div>
+    <!-- Scripts -->
+    <script src="../JS/transition.js"></script>
+</body>
+</html>

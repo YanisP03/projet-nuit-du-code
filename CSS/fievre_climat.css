@@ -1,0 +1,259 @@
+/* Variables globales */
+:root {
+    --hot-red: #FF4B3E;
+    --warm-orange: #FF9B54;
+    --cool-blue: #2B4162;
+    --warm-white: #FAF3E0;
+    --warning-yellow: #FFD93D;
+    --shadow: rgba(0, 0, 0, 0.15);
+    --transition: all 0.3s ease;
+}
+
+/* Reset et styles de base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: var(--cool-blue);
+    color: var(--warm-white);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* Animations */
+@keyframes heatWave {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Navigation */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: linear-gradient(120deg, var(--hot-red), var(--warm-orange));
+    z-index: 1000;
+    box-shadow: 0 4px 15px var(--shadow);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: var(--warm-white);
+    text-decoration: none;
+    font-size: 2.2rem;
+    font-weight: 700;
+    transition: var(--transition);
+}
+
+.logo:hover {
+    transform: scale(1.1);
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links a {
+    color: var(--warm-white);
+    text-decoration: none;
+    font-size: 1.1rem;
+    padding: 0.6rem 1.2rem;
+    border-radius: 25px;
+    transition: var(--transition);
+    text-transform: uppercase;
+}
+
+.nav-links a:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+}
+
+/* Hero Section */
+.hero {
+    min-height: 100vh;
+    background: linear-gradient(45deg, var(--hot-red), var(--warm-orange), var(--warning-yellow));
+    background-size: 200% 200%;
+    animation: heatWave 15s ease infinite;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 6rem 2rem;
+    position: relative;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: repeating-linear-gradient(
+        45deg,
+        transparent,
+        transparent 10px,
+        rgba(255, 255, 255, 0.05) 10px,
+        rgba(255, 255, 255, 0.05) 20px
+    );
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+}
+
+.hero h1 {
+    font-size: 4rem;
+    font-weight: 800;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Content Sections */
+.section {
+    padding: 6rem 0;
+    position: relative;
+}
+
+.content {
+    background: linear-gradient(var(--cool-blue), var(--hot-red));
+}
+
+.text-block {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 2rem;
+    border-radius: 12px;
+    backdrop-filter: blur(5px);
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* Image Gallery */
+.image-gallery {
+    background: var(--cool-blue);
+}
+
+.image-gallery .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.image-card {
+    background: linear-gradient(135deg, var(--hot-red), var(--warm-orange));
+    border-radius: 12px;
+    overflow: hidden;
+    transition: var(--transition);
+}
+
+.image-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(255, 75, 62, 0.3);
+}
+
+.image-card img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-bottom: 3px solid var(--warning-yellow);
+}
+
+.image-card p {
+    padding: 1.5rem;
+    color: var(--warm-white);
+    text-align: center;
+}
+
+/* Climate Impact Section */
+.climate-impact {
+    background: linear-gradient(var(--hot-red), var(--warm-orange));
+}
+
+.climate-impact .text-block {
+    background: rgba(43, 65, 98, 0.2);
+}
+
+.climate-impact ul {
+    list-style: none;
+    padding-left: 2rem;
+}
+
+.climate-impact li {
+    position: relative;
+    padding-left: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.climate-impact li::before {
+    content: '🔥';
+    position: absolute;
+    left: -1.5rem;
+}
+
+/* CTA Section */
+.cta {
+    background: var(--warning-yellow);
+    text-align: center;
+    padding: 4rem 2rem;
+}
+
+.cta h3 {
+    color: var(--cool-blue);
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .container {
+        padding: 1rem;
+    }
+
+    .text-block {
+        padding: 1.5rem;
+    }
+}
+
+/* Scrollbar personnalisée */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--cool-blue);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--hot-red);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--warm-orange);
+}

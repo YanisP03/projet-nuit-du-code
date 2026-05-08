@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Le Cœur de l'Océan</title>
+    <link rel="stylesheet" href="../CSS/coeur_recifs.css">
+    <link rel="stylesheet" href="../CSS/navbar.css">
+    <link rel="stylesheet" href="../CSS/loading.css">
+</head>
+<body>
+    <header>
+        <section class="navbar">
+            <nav>
+                <div class="container">
+                    <a href="#" class="logo" id="bubbleSoundButton" onclick="showLoadingWithProgress('./accueil.html'); return false;">
+                        🌊 OceanToons
+                    </a>
+                    <button class="menu-btn" id="menu-toggle">☰</button>
+                    <div class="nav-links">
+                        <a href="#" id="bubbleSoundButton" onclick="showLoadingWithProgress('./credit.html'); return false;"> ©️ Crédit </a>
+                        <a href="#" id="bubbleSoundButton" onclick="showLoadingWithProgress('./contact.html'); return false;">💬 Contact</a>
+                        <a href="#" id="bubbleSoundButton" onclick="showLoadingWithProgress('./video.html'); return false;">🎥 Podcast</a>
+                    </div>
+                </div>
+            </nav>
+        </section>
+    </header>
+
+    <section class="hero">
+        <div class="ocean-waves"></div>
+        <div class="hero-content">
+            <h1>Le Cœur de l'Océan</h1>
+            <p class="hero-subtitle">Les récifs coralliens : le battement vital de nos océans</p>
+            <div class="scroll-indicator">
+                <div class="mouse"></div>
+                <span>Découvrir</span>
+            </div>
+        </div>
+    </section>
+
+    <main>
+        <section class="intro section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Les Récifs Coralliens : Une Symbiose Vitale</h2>
+                    <div class="coral-decoration"></div>
+                </div>
+                <div class="text-grid">
+                    <div class="info-card glass-effect">
+                        <div class="card-icon">💗</div>
+                        <h3>Le Battement de la Vie Marine</h3>
+                        <p>Le cœur humain agit comme une pompe vitale, tout comme les récifs coralliens maintiennent l'équilibre des écosystèmes marins.</p>
+                    </div>
+                    <div class="info-card glass-effect">
+                        <div class="card-icon">🏠</div>
+                        <h3>Un Habitat Essentiel</h3>
+                        <p>Les récifs coralliens abritent plus de 25% de la vie marine, créant un écosystème riche et diversifié.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="comparison section">
+            <div class="container">
+                <div class="comparison-grid">
+                    <div class="comparison-card">
+                        <img src="/api/placeholder/600/400" alt="Cœur humain" class="comparison-image">
+                        <div class="card-content glass-effect">
+                            <h3>Le Cœur Humain</h3>
+                            <p>La pompe de la vie qui maintient le corps en équilibre.</p>
+                        </div>
+                    </div>
+                    <div class="comparison-card">
+                        <img src="/api/placeholder/600/400" alt="Récifs coralliens" class="comparison-image">
+                        <div class="card-content glass-effect">
+                            <h3>Les Récifs Coralliens</h3>
+                            <p>L'habitat qui soutient des millions d'espèces marines.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="threats section">
+            <div class="container">
+                <h2>Menaces et Actions</h2>
+                <div class="threats-grid">
+                    <div class="threat-card glass-effect">
+                        <span class="warning-icon">⚠️</span>
+                        <h3>Menaces Actuelles</h3>
+                        <ul class="threat-list">
+                            <li>Réchauffement climatique</li>
+                            <li>Acidification des océans</li>
+                            <li>Pollution plastique</li>
+                            <li>Surpêche</li>
+                        </ul>
+                    </div>
+                    <div class="action-card glass-effect">
+                        <span class="action-icon">🌱</span>
+                        <h3>Actions à Entreprendre</h3>
+                        <ul class="action-list">
+                            <li>Réduction des émissions de CO2</li>
+                            <li>Limitation de la pollution plastique</li>
+                            <li>Promotion de la pêche durable</li>
+                            <li>Restauration des récifs</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta section">
+            <div class="container">
+                <h2>Agissons Ensemble</h2>
+                <p>Un océan en bonne santé est essentiel pour l'équilibre de notre planète</p>
+                <button class="cta-button glass-effect" href="https://www.coralguardian.org/les-coraux-importants/" target="_blank">
+                    <span>En savoir plus</span>
+                    <span class="button-icon">→</span>
+                </button>
+            </div>
+        </section>
+    </main>
+
+    <footer class="glass-effect">
+        <div class="container">
+            <p>© 2024 OceanLife - Protection des récifs coralliens</p>
+        </div>
+    </footer>
+
+    <div class="loading-container">
+        <audio id="bubbleSound" preload="auto">
+            <source src="../IMAGES/Bruitage gratuit bulle.mp3" type="audio/mpeg">
+        </audio>
+        <div class="bubbles-background"></div>
+        <div class="circle">
+            <div class="progress-ring">
+                <svg>
+                    <circle class="progress-ring-circle-bg" cx="100" cy="100" r="90"/>
+                    <circle class="progress-ring-circle" cx="100" cy="100" r="90"/>
+                </svg>
+            </div>
+            <div class="percent">0%</div>
+        </div>
+    </div>
+
+    <div class="loading-container">
+        <audio id="bubbleSound" preload="auto">
+            <source src="../IMAGES/Bruitage gratuit bulle.mp3" type="audio/mpeg">
+        </audio>
+        <div class="bubbles-background"></div>
+        <div class="circle">
+            <div class="progress-ring">
+                <svg>
+                    <circle class="progress-ring-circle-bg" cx="100" cy="100" r="90"/>
+                    <circle class="progress-ring-circle" cx="100" cy="100" r="90"/>
+                </svg>
+            </div>
+            <div class="percent">0%</div>
+        </div>
+    </div>
+
+    <div class="floating-particles"></div>
+    <div class="loading-container">
+        <audio id="bubbleSound" preload="auto">
+            <source src="../IMAGES/Bruitage gratuit bulle.mp3" type="audio/mpeg">
+        </audio>
+        <div class="bubbles-background"></div>
+        <div class="circle">
+            <div class="progress-ring">
+                <svg>
+                    <circle class="progress-ring-circle-bg" cx="100" cy="100" r="90"/>
+                    <circle class="progress-ring-circle" cx="100" cy="100" r="90"/>
+                </svg>
+            </div>
+            <div class="percent">0%</div>
+        </div>
+    </div>
+</body>
+<script src="../JS/transition.js"></script>
+</html>

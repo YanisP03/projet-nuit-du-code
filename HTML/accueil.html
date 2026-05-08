@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OceanToons - Exploration Marine</title>
+    <link rel="stylesheet" href="../CSS/accueil.css">
+    <link rel="stylesheet" href="../CSS/loading.css">
+    <link rel="stylesheet" href="../CSS/navbar.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <header>
+        <section class="navbar">
+            <nav>
+                <div class="container">
+                    <a href="#" class="logo">
+                        🌊 OceanToons
+                    </a>
+                    <button class="menu-btn" id="menu-toggle">☰</button>
+                    <div class="nav-links">
+                        <a href="#" id="bubbleSoundButton" onclick="showLoadingWithProgress('./credit.html'); return false;"> ©️ Crédit </a>
+                        <a href="#" id="bubbleSoundButton" onclick="showLoadingWithProgress('./contact.html'); return false;">💬 Contact</a>
+                        <a href="#" id="bubbleSoundButton" onclick="showLoadingWithProgress('./video.html'); return false;">🎥 Podcast</a>
+                    </div>
+                </div>
+            </nav>
+        </section>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Découvrez les Merveilles de l'Océan</h1>
+            <p>Cliquez les émojies !</p>
+            <a href="#ocean" class="cta-button">Explorer</a>
+        </div>
+    </section>
+
+    <div class="boat-container" onclick="showLoadingWithProgress('./solutions_zero_emissions.html');">
+        <span class="boat-emoji">⛵</span>
+    </div>
+
+    <div class="separator"></div>
+    <!-- Ocean Section -->
+    <section id="ocean" class="ocean-section">
+
+        <!-- Human Body Section -->
+        <div class="human-body-section">
+            <!-- Brain -->
+            <div class="brain-container">
+                <button id="bubbleSoundButton" onclick="showLoadingWithProgress('./fievre_climat.html'); return false;" class="brain-button" onclick="playBubbleSound()">🧠</button>
+                <span class="thermometer-emoji">🌡️</span>
+            </div>
+            <!-- Lungs -->
+            <div id="bubbleSoundButton" onclick="showLoadingWithProgress('./poumons_plancton.html'); return false;" class="organs-container">
+                <button class="organ-button lung lung-left" onclick="playBubbleSound()">🫁</button>
+            </div>
+            <!-- Heart -->
+            <div class="Heart">
+                <button href="#" id="bubbleSoundButton" onclick="showLoadingWithProgress('./coeur_recifs.html'); return false;" class="heart-middle" onclick="playBubbleSound()">🫀</button>
+
+            <!-- Kidneys -->
+            <div class="kidneys-container">
+                <button href="#" id="bubbleSoundButton" onclick="showLoadingWithProgress('./foie_plastique.html'); return false;" class="kidneys-button" onclick="playBubbleSound()">
+                    <img src="../IMAGES/liver.png" alt="Reins" class="kidneys-image">
+                </button>
+            </div>
+        </div>
+
+        <!-- Loading Container -->
+        <div class="loading-container">
+            <audio id="bubbleSound" preload="auto">
+                <source src="../IMAGES/Bruitage gratuit bulle.mp3" type="audio/mpeg">
+            </audio>
+            <div class="bubbles-background"></div>
+            <div class="circle">
+                <div class="progress-ring">
+                    <svg>
+                        <circle class="progress-ring-circle-bg" cx="100" cy="100" r="90"/>
+                        <circle class="progress-ring-circle" cx="100" cy="100" r="90"/>
+                    </svg>
+                </div>
+                <div class="percent">0%</div>
+            </div>
+        </div>
+    </section>
+    <div>
+
+    </div>
+    <div class="separator"></div>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-main">
+                <div class="footer-brand">
+                    <h3>🌊 OceanToons</h3>
+                    <p>Site le plus beau de la rochelle, La Venise Verte Represente</p>
+                </div>
+                <div class="footer-links">
+                    <a href="#" id="bubbleSoundButton" onclick="showLoadingWithProgress('./credit.html')">©️ Crédits</a>
+                    <a href="#" id="bubbleSoundButton" onclick="showLoadingWithProgress('./contact.html')">💬 Contact</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 OceanToons - Tous droits réservés</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="loading-container">
+        <audio id="bubbleSound" preload="auto">
+            <source src="../IMAGES/Bruitage gratuit bulle.mp3" type="audio/mpeg">
+        </audio>
+        <div class="bubbles-background"></div>
+        <div class="circle">
+            <div class="progress-ring">
+                <svg>
+                    <circle class="progress-ring-circle-bg" cx="100" cy="100" r="90"/>
+                    <circle class="progress-ring-circle" cx="100" cy="100" r="90"/>
+                </svg>
+            </div>
+            <div class="percent">0%</div>
+        </div>
+    </div>
+</body>
+<script src="../JS/transition.js"></script>
+</html>

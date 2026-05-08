@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solutions Zéro Émissions CO2</title>
+    <link rel="stylesheet" href="../CSS/solutions_zero_emissions.css">
+    <link rel="stylesheet" href="../CSS/navbar.css">
+    <link rel="stylesheet" href="../CSS/loading.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <header>
+        <section class="navbar">
+            <nav>
+                <div class="container">
+                    <a href="#" class="logo" id="bubbleSoundButton" onclick="showLoadingWithProgress('./accueil.html'); return false;">
+                        🌊 OceanToons
+                    </a>
+                    <button class="menu-btn" id="menu-toggle">☰</button>
+                    <div class="nav-links">
+                        <a href="#" id="bubbleSoundButton" onclick="showLoadingWithProgress('./credit.html'); return false;"> ©️ Crédit </a>
+                        <a href="#" id="bubbleSoundButton" onclick="showLoadingWithProgress('./contact.html'); return false;">💬 Contact</a>
+                        <a href="#" id="bubbleSoundButton" onclick="showLoadingWithProgress('./video.html'); return false;">🎥 Podcast</a>
+                    </div>
+                </div>
+            </nav>
+        </section>
+    </header>
+
+
+    <!-- Section Hero -->
+    <section class="hero" id="hero">
+        <div class="hero-content">
+            <h1>Solutions Zéro Émissions CO2</h1>
+            <p>Des technologies innovantes pour préserver nos océans et lutter contre le réchauffement climatique.</p>
+        </div>
+    </section>
+
+    <!-- Section Solutions -->
+    <section class="solutions" id="solutions">
+        <div class="container">
+            <h2>Des solutions pour un avenir sans CO2</h2>
+            <div class="text-block">
+                <p>
+                    Le changement climatique nécessite des solutions durables pour réduire les émissions de CO2. Voici des innovations de pointe 
+                    qui aident à préserver notre planète, en particulier les océans.
+                </p>
+            </div>
+
+            <!-- Solution 1 : Voilier MODX 70 Catamaran -->
+            <div class="solution-card">
+                <div class="solution-content">
+                    <div class="solution-text">
+                        <h3>Voilier MODX 70 Catamaran</h3>
+                        <p>
+                            Le MODX 70 Catamaran est un voilier révolutionnaire conçu pour la navigation durable. Il utilise des technologies
+                            de propulsion à zéro émission, fonctionnant grâce à l'énergie éolienne et solaire, éliminant ainsi la nécessité 
+                            de moteurs à combustion.
+                        </p>
+                        <p>
+                            Ce catamaran offre une solution pratique pour les passionnés de voile tout en préservant nos océans et en 
+                            contribuant à la lutte contre le réchauffement climatique.
+                        </p>
+                    </div>
+                    <div class="solution-image">
+                        <img src="../Images/VoilierMODX70Catamaran.png" alt="MODX 70 Catamaran">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Solution 2 : Véhicules électriques marins -->
+            <div class="solution-card">
+                <div class="solution-content">
+                    <div class="solution-text">
+                        <h3>Véhicules électriques marins</h3>
+                        <p>
+                            Les véhicules marins électriques sont une alternative durable aux moteurs à essence ou diesel. Ces embarcations
+                            sont propulsées par des batteries rechargeables alimentées par des sources d'énergie renouvelables, offrant
+                            une navigation totalement propre.
+                        </p>
+                    </div>
+                    <div class="solution-image">
+                        <img src="../Images/BateauElectric.jpg" alt="Véhicule marin électrique">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Solution 3 : Réseaux de nettoyage des océans -->
+            <div class="solution-card">
+                <div class="solution-content">
+                    <div class="solution-text">
+                        <h3>Réseaux de nettoyage des océans</h3>
+                        <p>
+                            Des initiatives comme le projet "The Ocean Cleanup" utilisent des technologies de pointe pour nettoyer les
+                            déchets plastiques flottants dans les océans. Ce système utilise des courants océaniques pour collecter les 
+                            plastiques sans émettre de CO2, contribuant ainsi à la régénération des écosystèmes marins.
+                        </p>
+                    </div>
+                    <div class="solution-image">
+                        <img src="../Images/TheOceanCleanup.jpg" alt="Nettoyage des océans">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Appel à l'action -->
+    <section class="cta">
+        <h3>Rejoignez le mouvement pour un avenir sans CO2</h3>
+        <p>Investir dans ces solutions, c'est investir dans un avenir plus propre et plus durable pour notre planète.</p>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 EcoSystème - Tous droits réservés</p>
+    </footer>
+
+    <div class="loading-container">
+        <audio id="bubbleSound" preload="auto">
+            <source src="../IMAGES/Bruitage gratuit bulle.mp3" type="audio/mpeg">
+        </audio>
+        <div class="bubbles-background"></div>
+        <div class="circle">
+            <div class="progress-ring">
+                <svg>
+                    <circle class="progress-ring-circle-bg" cx="100" cy="100" r="90"/>
+                    <circle class="progress-ring-circle" cx="100" cy="100" r="90"/>
+                </svg>
+            </div>
+            <div class="percent">0%</div>
+        </div>
+    </div>
+    <!-- Scripts -->
+    <script src="../JS/transition.js"></script>
+</body>
+</html>

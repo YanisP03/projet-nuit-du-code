@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../CSS/navbar.css">
+    <link rel="stylesheet" href="../CSS/loading.css">
+    <link rel="stylesheet" href="../CSS/video.css">
+</head>
+<body>
+    <header>
+        <section class="navbar">
+            <nav>
+                <div class="container">
+                    <a href="#" class="logo" id="bubbleSoundButton" onclick="showLoadingWithProgress('./accueil.html'); return false;">
+                        🌊 OceanWorld
+                    </a>
+                    <button class="menu-btn" id="menu-toggle">☰</button>
+                    <div class="nav-links">
+                        <a href="#" id="bubbleSoundButton" onclick="showLoadingWithProgress('./credit.html'); return false;"> ©️ Crédit </a>
+                        <a href="#" id="bubbleSoundButton" onclick="showLoadingWithProgress('./contact.html'); return false;">💬 Contact</a>
+                        <a href="#">🎥 Podcast</a>
+                    </div>
+                </div>
+            </nav>
+        </section>
+    </header>
+<body>
+    <main>
+        <section class="video-gallery">
+            <h1>Podcast (uniquement disponible sur chrome)</h1>
+            <div class="video-grid">
+                <div class="video-card" data-video="../IMAGES/video.mp4">
+                    <img src="../IMAGES/video1.png" alt="Podcast ep1">
+                    <p>Podcast ep1</p>
+                </div>
+                <div class="video-card" data-video="../IMAGES/video2.mp4">
+                    <img src="../IMAGES/video2.png" alt="Podcast ep2">
+                    <p>Podcast ep2</p>
+                </div>
+            </div>
+        </section>
+
+        <div class="modal" id="videoModal">
+            <div class="modal-content">
+                <button class="close-btn" id="closeModal">×</button>
+                <video controls id="modalVideo">
+                    <source src="" type="video/mp4">
+                    Votre navigateur ne supporte pas la lecture des vidéos.
+                </video>
+            </div>
+        </div>
+    </main>
+
+    <div class="loading-container">
+        <audio id="bubbleSound" preload="auto">
+            <source src="../IMAGES/Bruitage gratuit bulle.mp3" type="audio/mpeg">
+        </audio>
+        <div class="bubbles-background"></div>
+        <div class="circle">
+            <div class="progress-ring">
+                <svg>
+                    <circle class="progress-ring-circle-bg" cx="100" cy="100" r="90"/>
+                    <circle class="progress-ring-circle" cx="100" cy="100" r="90"/>
+                </svg>
+            </div>
+            <div class="percent">0%</div>
+        </div>
+    </div>
+
+  <script src="../JS/transition.js"></script>
+</body>
+</html>

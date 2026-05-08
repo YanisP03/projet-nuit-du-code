@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fièvre et Réchauffement Climatique</title>
+    <link rel="stylesheet" href="../CSS/fievre_climat.css">
+    <link rel="stylesheet" href="../CSS/navbar.css">
+    <link rel="stylesheet" href="../CSS/loading.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <header>
+        <section class="navbar">
+            <nav>
+                <div class="container">
+                    <a href="#" class="logo" id="bubbleSoundButton" onclick="showLoadingWithProgress('./accueil.html'); return false;">
+                        🌊 OceanToons
+                    </a>
+                    <button class="menu-btn" id="menu-toggle">☰</button>
+                    <div class="nav-links">
+                        <a href="#" id="bubbleSoundButton" onclick="showLoadingWithProgress('./credit.html'); return false;"> ©️ Crédit </a>
+                        <a href="#" id="bubbleSoundButton" onclick="showLoadingWithProgress('./contact.html'); return false;">💬 Contact</a>
+                        <a href="#" id="bubbleSoundButton" onclick="showLoadingWithProgress('./video.html'); return false;">🎥 Podcast</a>
+                    </div>
+                </div>
+            </nav>
+        </section>
+    </header>
+
+    <!-- Section Hero -->
+    <section class="hero" id="hero">
+        <div class="hero-content">
+            <h1>Fièvre de la Terre</h1>
+            <p>Comprendre le parallèle entre la fièvre humaine et le réchauffement climatique.</p>
+        </div>
+    </section>
+
+    <!-- Section Contenu -->
+    <section class="content" id="content">
+        <div class="container">
+            <h2>Fièvre et Réchauffement Climatique : Une Analogique</h2>
+            <div class="text-block">
+                <p>
+                    La fièvre est la réponse du corps humain à une infection ou un déséquilibre. 
+                    Lorsque la température dépasse la normale, cela signale un dysfonctionnement qui nécessite une intervention.
+                </p>
+                <p>
+                    De même, le réchauffement climatique est une "fièvre" planétaire, indiquant un déséquilibre environnemental 
+                    causé par l'augmentation des gaz à effet de serre, la pollution et la déforestation.
+                </p>
+            </div>
+            <h3>Signes Alarmants</h3>
+            <div class="text-block">
+                <p>
+                    Les conséquences d'une fièvre non traitée peuvent être graves, entraînant des dommages permanents au corps humain. 
+                    De façon similaire, si le réchauffement climatique n'est pas maîtrisé, les écosystèmes terrestres et marins risquent de 
+                    subir des dommages irréversibles.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Galerie -->
+    <section class="image-gallery" id="gallery">
+        <div class="container">
+            <div class="image-card">
+                <img src="./Images/fievre.png" alt="Fièvre humaine">
+                <p>Fièvre : Une réponse biologique au déséquilibre interne.</p>
+            </div>
+            <div class="image-card">
+                <img src="./Images/rechauffementClimatique.png" alt="Réchauffement climatique">
+                <p>Réchauffement climatique : Un déséquilibre mondial causé par les activités humaines.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Impact -->
+    <section class="climate-impact" id="climate-impact">
+        <div class="container">
+            <h2>Les Effets de la "Fièvre" Climatique</h2>
+            <div class="text-block">
+                <p>
+                    Les impacts incluent des phénomènes météorologiques extrêmes, la montée du niveau des mers, et la perte de biodiversité. 
+                    Tout comme une fièvre qui persiste peut endommager les organes, le réchauffement climatique prolongé met en danger 
+                    tous les écosystèmes de la planète.
+                </p>
+                <h3>Que Faire ?</h3>
+                <ul>
+                    <li>Réduire les émissions de carbone.</li>
+                    <li>Planter des arbres et protéger les forêts.</li>
+                    <li>Adopter des énergies renouvelables.</li>
+                    <li>Soutenir les initiatives de conservation.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Appel à l'Action -->
+    <section class="cta">
+        <h3>Guérir la Terre commence avec nous.</h3>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 EcoSystème - Tous droits réservés</p>
+    </footer>
+
+    <div class="loading-container">
+        <audio id="bubbleSound" preload="auto">
+            <source src="../IMAGES/Bruitage gratuit bulle.mp3" type="audio/mpeg">
+        </audio>
+        <div class="bubbles-background"></div>
+        <div class="circle">
+            <div class="progress-ring">
+                <svg>
+                    <circle class="progress-ring-circle-bg" cx="100" cy="100" r="90"/>
+                    <circle class="progress-ring-circle" cx="100" cy="100" r="90"/>
+                </svg>
+            </div>
+            <div class="percent">0%</div>
+        </div>
+    </div>
+    <!-- Scripts -->
+    <script src="../JS/transition.js"></script>
+</body>
+</html>
